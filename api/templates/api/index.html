@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div>"HI"</div>
+<script type="text/javascript">
+console.log("hi");
+	// console.log("{{key}}");
+	localStorage.setItem('token',"{{key}}");
+	var something = localStorage.getItem('token')
+	console.log(something);
+	window.location = "http://localhost:8000/api/index/";
+</script>
+</body>
+</html>

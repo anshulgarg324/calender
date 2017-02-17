@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- <link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic" rel="stylesheet" type="text/css"> -->
+    <link rel="stylesheet" type="text/css" href="/static/jquery.datepick.css">
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <!-- <link href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700" rel="stylesheet" type="text/css"> -->
+    <script src='/static/lib/jquery.min.js'></script>
+    <script type="text/javascript" src="/static/lib/jquery.plugin.js"></script>
+    <script type="text/javascript" src="/static/lib/jquery.datepick.js"></script>
+    <script src='/static/calender.js'></script>
+</head>
+
+
+<body style="background-color: #000;">
+        <div id="cal" style="margin-left:20%;position:absolute;"></div>
+    <button id="sync" style="position:absolute;top:5px;right:10px;background-color:#444;color:white;width: 80px; height: 40px; font-size: 19px" >Sync</button>
+    <div id="sidebar" style="margin-left:0%;width:20%;position:absolute;background-color:#000000;">
+        
+        <div style="color:#ffffff; background-color: #787878" class="dialog">
+            <br/>
+            <div class="title">
+                <h2 id="add_ev">Add Event</h2>
+            </div>
+            <form method="post" id="form_create">
+                <textarea id="desc" placeholder="Description"></textarea>
+                <br/>
+                <textarea id="loc" placeholder="Location"></textarea>
+                <br/><br/>
+                <label style="color:white;"> Start Date </label><input id="sdate" type="date" placeholder="start-date"/>
+                <br><br>
+                <label style="color:white;"> End Date </label> <input id="edate" type="date" placeholder="end-date"/>
+                <br><br>
+               <input id ="create" type="button" value="Create"/><br>
+            </form>
+            <div id="put">
+ 
+            </div>
+        </div>
+        
+        <hr/>
+
+        <div style="color:#ffffff; background-color: #787878; padding-bottom: 50px; height: 400px; overflow: scroll;">
+            <br/>
+            <h2>Events on selected date:</h2>
+            <p id="events"></p>
+        </div>
+    </div>
+        
+<!--         <script>
+            var form = new FormData();
+            form.append("location", "ajmer");
+            form.append("description", "raawan");
+            form.append("start_date", "2017-07-13");
+            form.append("end_date", "2017-07-16");
+
+            var settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": "http://127.0.0.1:8000/api/events/",
+            "method": "POST",
+            "headers": {
+                "authorization": "Token  f8528b2767d1bbdd8f03601c7a0d84e3893d2442",
+                "cache-control": "no-cache",
+                "postman-token": "f29d9218-af7c-47d0-3f25-9a5ca40f97fd"
+                },
+            "processData": false,
+            "contentType": false,
+            "mimeType": "multipart/form-data",
+            "data": form
+            }
+
+            $.ajax(settings).done(function (response) {
+                                  console.log(response);
+                                  });
+
+            function desc() {
+                document.getElementById("desc").style.display = "inline";
+            }
+        </script> -->
+</body>
+</html>
